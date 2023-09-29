@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
-# bash scrip that prints 'to infinity and beyond' infinite times LOL
+# Displays "To infinity and beyond" indefinitely with
+#+ a sleep 2 in between each iteration.
 
 while true
 do
-	echo "To infinity and beyond"
-	sleep 2
-done#!/usr/bin/env bash
-# bash scrip that prints 'to infinity and beyond' infinite times LOL
-
-while true
-do
-	echo "To infinity and beyond"
-	sleep 2
+  echo "To infinity and beyond"
+  sleep 2
 done
