@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# bash scrip that prints 'to infinity and beyond' infinite times LOL
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done#!/usr/bin/env bash
+# bash scrip that prints 'to infinity and beyond' infinite times LOL
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script kills buzz's catch phrase
+
+pkill -f "4-to_infinity_and_beyond"
