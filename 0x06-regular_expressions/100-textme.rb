@@ -7,23 +7,19 @@ def extract_info(log_entry)
   flags = log_entry.match(/\[flags:(.*?)\]/)[1]
   "#{sender},#{receiver},#{flags}"
 end
-
-# Read the log file and process each log entry
-log_file = ARGV[0]
-
-if log_file.nil?
-  puts "Usage: ./100-textme.rb <log_file>"
+# Check if an argument is provided
+if ARGV.empty?
+  puts "Usage: ./100-textme.rb <log_entry>"
   exit(1)
 end
+# Process the provided log entry
+log_entry = ARGV[0]
+info = extract_info(log_entry)
 
-begin
-  File.readlines(log_file).each do |line|
-    if line.include?('Receive SMS') || line.include?('Sent SMS')
-      info = extract_info(line)
-      puts info
-    end
-  end
-rescue StandardError => e
-  puts "Error: #{e.message}"
+# Check if the info is empty and handle accordingly
+if info.empty?
+  puts "Error: Unable to extract information from the log entry."
   exit(1)
+else
+  puts info
 end
